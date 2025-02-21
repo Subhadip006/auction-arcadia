@@ -1,0 +1,52 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.refresh-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 10px;
+  text-align: center;
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.score-table th, .score-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.score-table th {
+  background-color: #7e1212;
+}
+
+.score-table tr:nth-child(even) {
+  background-color: #372222;
+}
