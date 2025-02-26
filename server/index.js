@@ -22,7 +22,7 @@ app.get('/api/scores', async (req, res) => {
     const sheets = google.sheets({ version: 'v4', auth: client });
     
     const spreadsheetId = process.env.SPREADSHEET_ID;
-    const range = 'Sheet1!A2:B'; // Just team name and score
+    const range = 'Sheet1!A2:C'; // Just team name and score
 
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId,
@@ -38,7 +38,8 @@ app.get('/api/scores', async (req, res) => {
   
     const teams = rows.map(row => ({
       name: row[0],
-      score: row[1]
+      score: row[1],
+      budget:row[2]
     }));
 
     res.json(teams);
